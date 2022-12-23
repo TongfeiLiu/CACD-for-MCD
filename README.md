@@ -1,2 +1,2 @@
 # CACD
-Re-implemented CACD
+Re-implemented CACD will be released.
