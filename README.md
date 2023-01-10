@@ -1,2 +1,2 @@
 # CACD for MCD
-Re-implemented CACD for MCD will be released.
+Re-implemented CACD for Unsupervised Multimodal Change Detection will be released.
