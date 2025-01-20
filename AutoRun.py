@@ -5,7 +5,7 @@ import os
 #     if not os.path.exists(path):
 #         os.makedirs(path)
 #     os.system('python train.py --patch_size={} --vision_path={}'.format(ps, path))
-for tps in range(7, 15, 4):
+for tps in range(3, 15, 2):
     pth = './vision/patch_size{}/'.format(tps)
     if not os.path.exists(pth):
         os.makedirs(pth)
