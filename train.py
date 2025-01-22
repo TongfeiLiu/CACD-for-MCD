@@ -29,18 +29,18 @@ import scipy.io as io
 device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_name', default='france', type=str)  # bastrop or california or other
-parser.add_argument('--t1_path', default='./data/France/Img7-Ac.png', type=str)
-parser.add_argument('--t2_path', default='./data/France/Img7-Bc.png', type=str)
-parser.add_argument('--gt_path', default='./data/France/Img7-C.png', type=str)
+parser.add_argument('--data_name', default='yellow', type=str)  # bastrop or california or other
+# parser.add_argument('--t1_path', default='./data/France/Img7-Ac.png', type=str)
+# parser.add_argument('--t2_path', default='./data/France/Img7-Bc.png', type=str)
+# parser.add_argument('--gt_path', default='./data/France/Img7-C.png', type=str)
 # parser.add_argument('--t1_path', default='./data/California/California.mat', type=str)
 # parser.add_argument('--t1_path', default='./data/Bastrop/Cross-sensor-Bastrop-data.mat', type=str)
 # parser.add_argument('--t1_path', default='./data/Italy/Italy_1.bmp', type=str)
 # parser.add_argument('--t2_path', default='./data/Italy/Italy_2.bmp', type=str)
 # parser.add_argument('--gt_path', default='./data/Italy/Italy_gt.bmp', type=str)
-# parser.add_argument('--t1_path', default='./data/Yellow/yellow_C_1.bmp', type=str)
-# parser.add_argument('--t2_path', default='./data/Yellow/yellow_C_2.bmp', type=str)
-# parser.add_argument('--gt_path', default='./data/Yellow/gt.png', type=str)
+parser.add_argument('--t1_path', default='./data/Yellow/yellow_C_1.bmp', type=str)
+parser.add_argument('--t2_path', default='./data/Yellow/yellow_C_2.bmp', type=str)
+parser.add_argument('--gt_path', default='./data/Yellow/gt.png', type=str)
 # parser.add_argument('--t1_path', default='./data/Shuguang/shuguang_1.bmp', type=str)
 # parser.add_argument('--t2_path', default='./data/Shuguang/shuguang_2.bmp', type=str)
 # parser.add_argument('--gt_path', default='./data/Shuguang/shuguang_gt.bmp', type=str)
@@ -52,8 +52,8 @@ parser.add_argument('--gt_path', default='./data/France/Img7-C.png', type=str)
 # parser.add_argument('--gt_path', default='./data/Gloucester2/Img17-C.png', type=str)
 
 parser.add_argument('--t1_nc', default='1', type=int)
-parser.add_argument('--t2_nc', default='3', type=int)
-parser.add_argument('--patch_size', default=7, type=int)
+parser.add_argument('--t2_nc', default='1', type=int)
+parser.add_argument('--patch_size', default=3, type=int)
 parser.add_argument('--batch_size', default=16, type=int)
 parser.add_argument('--lr', default=0.0001, type=float)
 parser.add_argument('--lr_delay', default=range(1, 30, 1), type=float)
@@ -305,7 +305,7 @@ def test(patch_size, epoch):
 
     print('AUC={}, OA={}, kappa={}'.format(AUC3 ,OA3, kappa3))
 
-    if OA3 >= 60 or kappa3 >= 20.0:
+    if OA3 >= 60 or kappa3 >= 20.0: # To select a better result, set it yourself, and delete it if you don’t need it.
         path = args.vision_path + '{}'.format(epoch + 1)
         if not os.path.exists(path):
             os.makedirs(path)
