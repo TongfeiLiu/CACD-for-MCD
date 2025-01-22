@@ -6,7 +6,7 @@ The framework of the CACD is as follows:
 # Citation
 If you find our work useful for your research, please consider citing our paper:
 ```
-@ARTICLE{AEKAN,
+@ARTICLE{liu2025AEKAN,
   author={Liu, Tongfei and Xu, Jianjian and Lei, Tao and Wang, Yingbo and Du, Xiaogang and Zhang, Weichuan and Lv, Zhiyong and Gong, Maoguo},
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
   title={AEKAN: Exploring Superpixel-Based AutoEncoder Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection}, 
