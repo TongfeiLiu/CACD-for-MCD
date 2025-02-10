@@ -6,6 +6,17 @@ The framework of the CACD is as follows:
 # Citation
 If you find our work useful for your research, please consider citing our paper:
 ```
+@article{wu2021commonality,
+  title={Commonality autoencoder: Learning common features for change detection from heterogeneous images},
+  author={Wu, Yue and Li, Jiaheng and Yuan, Yongzhe and Qin, A Kai and Miao, Qi-Guang and Gong, Mao-Guo},
+  journal={IEEE transactions on neural networks and learning systems},
+  volume={33},
+  number={9},
+  pages={4257--4270},
+  year={2021},
+  publisher={IEEE}
+}
+
 @ARTICLE{liu2025AEKAN,
   author={Liu, Tongfei and Xu, Jianjian and Lei, Tao and Wang, Yingbo and Du, Xiaogang and Zhang, Weichuan and Lv, Zhiyong and Gong, Maoguo},
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
