@@ -4,7 +4,7 @@ The framework of the CACD is as follows:
 ![Framework of our proposed AEKAN)](https://github.com/TongfeiLiu/CACD-for-MCD/blob/main/Framework.png)
 
 # Citation
-If you find our work useful for your research, please consider citing our paper:
+If you find our work useful for your research, please consider citing the following paper:
 ```
 @article{wu2021commonality,
   title={Commonality autoencoder: Learning common features for change detection from heterogeneous images},
